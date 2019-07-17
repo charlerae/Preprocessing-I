@@ -148,6 +148,13 @@ body h3 {
 body h1 {
   font-size: 2.5rem;
 }
+body h2 {
+  font-size: 1.8;
+  color: red;
+}
+body h3 {
+  font-size: 1.5;
+}
 .wrapper {
   display: flex;
   flex-direction: column;
@@ -157,6 +164,10 @@ body h1 {
 .wrapper nav {
   display: flex;
   flex-direction: row-reverse;
+}
+.wrapper nav a {
+  display: flex;
+  justify-content: space-around;
 }
 .containerTop {
   display: flex;
@@ -176,9 +187,13 @@ body h1 {
 }
 .middle {
   display: flex;
+  justify-content: space-evenly;
 }
 .middle div {
   display: flex;
+  padding: 2%;
+  width: 45%;
+  background-color: pink;
 }
 .middle .leftInfo {
   display: flex;
@@ -187,4 +202,11 @@ body h1 {
 .middle .rightInfo {
   display: flex;
   flex-direction: column;
+}
+.bottom {
+  display: flex;
+}
+.bottom ul {
+  display: flex;
+  lih3background-color: lightgray;
 }
