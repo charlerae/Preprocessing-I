@@ -140,24 +140,51 @@ body {
 body {
   display: flex;
 }
+body h1,
+body h2,
+body h3 {
+  font-style: italic;
+}
+body h1 {
+  font-size: 2.5rem;
+}
 .wrapper {
   display: flex;
   flex-direction: column;
-  width: 85%;
+  padding: 3%;
+  border: 95%;
 }
 .wrapper nav {
   display: flex;
   flex-direction: row-reverse;
 }
-.wrapper nav a {
-  justify-content: space-around;
-}
 .containerTop {
   display: flex;
   flex-direction: column;
-  background-color: #c24e4e;
+  background-color: lightgray;
+  padding: 3%;
+  border: 80%;
 }
 .containerTop img {
-  width: 45%;
-  height: 85%;
+  width: 35%;
+  height: 50%;
+  margin: 2%;
+}
+.containerTop button {
+  margin: 3%;
+  padding: 2% 5%;
+}
+.middle {
+  display: flex;
+}
+.middle div {
+  display: flex;
+}
+.middle .leftInfo {
+  display: flex;
+  flex-direction: column;
+}
+.middle .rightInfo {
+  display: flex;
+  flex-direction: column;
 }
