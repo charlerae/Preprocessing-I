@@ -134,3 +134,30 @@ html,
 body {
   height: 100%;
 }
+/* ------------------- */
+/* MY CODE STARTS HERE */
+/* ------------------- */
+body {
+  display: flex;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+}
+.wrapper nav {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.wrapper nav a {
+  justify-content: space-around;
+}
+.containerTop {
+  display: flex;
+  flex-direction: column;
+  background-color: #c24e4e;
+}
+.containerTop img {
+  width: 45%;
+  height: 85%;
+}
