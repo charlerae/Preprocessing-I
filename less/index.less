@@ -64,6 +64,7 @@ table {
 // VARIABLES
 @colormain: #f1f2f6;
 @colorpop: rgb(83, 24, 24);
+ 
 
 // MIXINS
 .columnflex {
@@ -89,6 +90,19 @@ table {
 	margin: 2%;
 }
 
+.tableheader {
+	background: @colorpop;
+		color: @colormain;
+		padding: 1%;
+		opacity: .5;
+}
+
+.hr {
+	background-color: @colorpop;
+	height: 1%;
+	width: 100%;
+}
+
 // MY STYLING CODE STARTS HERE
 
 body {
@@ -109,7 +123,8 @@ body {
 	}
 
 	h3 {
-		font-size: 1.5
+		font-size: 1.5;
+		.tableheader();
 	}
 
 }
@@ -129,6 +144,16 @@ body {
 			display: flex;
 			.fancytext();
 			margin: 2%;
+		}
+	}
+
+	footer {
+		justify-content: space-between;
+		display: flex;
+
+		a {
+			text-decoration: none;
+			color: black;
 		}
 	}
 }
@@ -173,9 +198,13 @@ body {
 		width: 65%;
 		.boxes();
 
-		// ul {
-			
-		// }
+		h3 {
+			padding: 2%;
+		}
+
+		hr {
+			.hr();
+		 }
 	}
 }
 
@@ -185,8 +214,33 @@ body {
 	margin: 2%;
 	.boxes();
 
+	hr {
+		.hr();
+	}
+
 	ul {
 		.columnflex();
+	
+
+		div {
+			display: flex;
+			
+			li {
+				display: flex;
+				justify-content: space-between;
+				width: 100%;
+			}
+
+			.worklist {
+				display: flex;
+				justify-content: space-between;
+				width: 100%;
+			}
+		}
+
+		hr {
+			.hr();
+		}
 
 		li {
 			display: flex;
