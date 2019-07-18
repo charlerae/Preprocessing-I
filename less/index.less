@@ -49,11 +49,210 @@ table {
 }
 
 /* Set every element's box-sizing to border-box */
-* {
-    box-sizing: border-box;
+// * {
+//     box-sizing: border-box;
+// }
+
+// html, body {
+// 	height: 100%;
+// }
+
+/* ------------------- */
+/* MY CODE STARTS HERE */ 
+/* ------------------- */
+
+// VARIABLES
+@colormain: #f1f2f6;
+@colorpop: rgb(83, 24, 24);
+
+ 
+
+// MIXINS
+.columnflex {
+	display: flex;
+	flex-direction: column;
 }
 
-html, body {
-    height: 100%;
+.justifyflex(@justify) {
+	display: flex;
+	justify-content: @justify;
+}
+
+.fancytext {
+	color: @colorpop;
+	font-weight: bold;
+}
+
+.boxes {
+	border: 2px solid rgb(83, 24, 24);
+	border-radius: 5px;
+	padding: 2%;
+}
+
+.middleBox {
+	background-color: @colormain;
+	flex-direction: column;
+	display: flex;
+	margin: 2%;
+}
+
+.tableheader {
+	background: @colorpop;
+		color: @colormain;
+		padding: 1%;
+		opacity: .5;
+}
+
+.hr {
+	background-color: @colorpop;
+	height: 1%;
+	width: 100%;
+}
+
+// MY STYLING CODE STARTS HERE
+
+body {
+	display: flex;
+	background-color: #a4b0be;
+	
+	h1, h2, h3 {
+		font-style: italic
+	}
+
+	h1 {
+		font-size: 2.5rem;
+	}
+
+	h2 {
+		font-size: 1.8;
+		color: @colorpop;
+	}
+
+	h3 {
+		font-size: 1.5;
+		.tableheader();
+	}
+
+}
+
+.wrapper {
+	.columnflex();
+	padding: 3%;
+	border: 95%;
+
+	nav {
+		flex-direction: row-reverse;
+		.justifyflex(flex-start);
+		
+		a {
+			text-decoration: none;
+			display: flex;
+			.fancytext();
+			margin: 2%;
+		}
+	}
+
+	footer {
+		.justifyflex(space-between);
+
+		a {
+			text-decoration: none;
+			color: black;
+		}
+	}
+}
+
+.top {
+	background-color: @colormain;
+	.columnflex();
+	padding: 3%;
+	border: 80%;
+
+	img {
+		height: 50%;
+		width: 35%;
+		margin: 2%;
+		.boxes();
+	}
+
+	button {
+		margin-top: 2%;
+		.fancytext();
+		.boxes();
+	}
+}
+
+.middle {
+	display: flex;
+
+	div {
+		display: flex;
+		padding: 2%;
+		width: 45%;
+	}
+
+	.leftInfo {
+		.middleBox;
+		width: 35%;
+		.boxes();
+	}
+
+	.rightInfo {
+		.middleBox();
+		width: 65%;
+		.boxes();
+
+		h3 {
+			padding: 2%;
+		}
+
+		hr {
+			.hr();
+		 }
+	}
+}
+
+.bottom {
+	background-color: @colormain;
+	.columnflex();
+	margin: 2%;
+	.boxes();
+
+	hr {
+		.hr();
+	}
+
+	ul {
+		.columnflex();
+	
+
+		div {
+			display: flex;
+			
+			li {
+				.justifyflex(space-between);
+				width: 100%;
+			}
+
+			.worklist {
+				.justifyflex(space-between);
+				width: 100%;
+			}
+		}
+
+		hr {
+			.hr();
+		}
+
+		li {
+			display: flex;
+
+			h3 {
+				flex-direction: row;
+				display: flex;
+				}
+		}
+	
+	}
 }
 

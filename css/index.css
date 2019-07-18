@@ -1,1 +1,313 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+/* ------------------- */
+/* MY CODE STARTS HERE */
+/* ------------------- */
+.columnflex {
+  display: flex;
+  flex-direction: column;
+}
+.fancytext {
+  color: #531818;
+  font-weight: bold;
+}
+.boxes {
+  border: 2px solid #531818;
+  border-radius: 5px;
+  padding: 2%;
+}
+.middleBox {
+  background-color: #f1f2f6;
+  flex-direction: column;
+  display: flex;
+  margin: 2%;
+}
+.tableheader {
+  background: #531818;
+  color: #f1f2f6;
+  padding: 1%;
+  opacity: 0.5;
+}
+.hr {
+  background-color: #531818;
+  height: 1%;
+  width: 100%;
+}
+body {
+  display: flex;
+  background-color: #a4b0be;
+}
+body h1,
+body h2,
+body h3 {
+  font-style: italic;
+}
+body h1 {
+  font-size: 2.5rem;
+}
+body h2 {
+  font-size: 1.8;
+  color: #531818;
+}
+body h3 {
+  font-size: 1.5;
+  background: #531818;
+  color: #f1f2f6;
+  padding: 1%;
+  opacity: 0.5;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 3%;
+  border: 95%;
+}
+.wrapper nav {
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+  display: flex;
+}
+.wrapper nav a {
+  text-decoration: none;
+  display: flex;
+  color: #531818;
+  font-weight: bold;
+  margin: 2%;
+}
+.wrapper footer {
+  justify-content: space-between;
+  display: flex;
+}
+.wrapper footer a {
+  text-decoration: none;
+  color: black;
+}
+.top {
+  background-color: #f1f2f6;
+  display: flex;
+  flex-direction: column;
+  padding: 3%;
+  border: 80%;
+}
+.top img {
+  height: 50%;
+  width: 35%;
+  margin: 2%;
+  border: 2px solid #531818;
+  border-radius: 5px;
+  padding: 2%;
+}
+.top button {
+  margin-top: 2%;
+  color: #531818;
+  font-weight: bold;
+  border: 2px solid #531818;
+  border-radius: 5px;
+  padding: 2%;
+}
+.middle {
+  display: flex;
+}
+.middle div {
+  display: flex;
+  padding: 2%;
+  width: 45%;
+}
+.middle .leftInfo {
+  background-color: #f1f2f6;
+  flex-direction: column;
+  display: flex;
+  margin: 2%;
+  width: 35%;
+  border: 2px solid #531818;
+  border-radius: 5px;
+  padding: 2%;
+}
+.middle .rightInfo {
+  background-color: #f1f2f6;
+  flex-direction: column;
+  display: flex;
+  margin: 2%;
+  width: 65%;
+  border: 2px solid #531818;
+  border-radius: 5px;
+  padding: 2%;
+}
+.middle .rightInfo h3 {
+  padding: 2%;
+}
+.middle .rightInfo hr {
+  background-color: #531818;
+  height: 1%;
+  width: 100%;
+}
+.bottom {
+  background-color: #f1f2f6;
+  display: flex;
+  flex-direction: column;
+  margin: 2%;
+  border: 2px solid #531818;
+  border-radius: 5px;
+  padding: 2%;
+}
+.bottom hr {
+  background-color: #531818;
+  height: 1%;
+  width: 100%;
+}
+.bottom ul {
+  display: flex;
+  flex-direction: column;
+}
+.bottom ul div {
+  display: flex;
+}
+.bottom ul div li {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.bottom ul div .worklist {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.bottom ul hr {
+  background-color: #531818;
+  height: 1%;
+  width: 100%;
+}
+.bottom ul li {
+  display: flex;
+}
+.bottom ul li h3 {
+  flex-direction: row;
+  display: flex;
+}
