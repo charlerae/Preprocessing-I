@@ -130,12 +130,28 @@ table {
 /* ------------------- */
 /* MY CODE STARTS HERE */
 /* ------------------- */
+.columnflex {
+  display: flex;
+  flex-direction: column;
+}
+.fancytext {
+  color: #531818;
+  font-weight: bold;
+}
 .boxes {
-  border: 2px solid black;
-  border-radius: 10px;
+  border: 2px solid #531818;
+  border-radius: 5px;
+  padding: 2%;
+}
+.middleBox {
+  background-color: #f1f2f6;
+  flex-direction: column;
+  display: flex;
+  margin: 2%;
 }
 body {
   display: flex;
+  background-color: #a4b0be;
 }
 body h1,
 body h2,
@@ -147,7 +163,7 @@ body h1 {
 }
 body h2 {
   font-size: 1.8;
-  color: red;
+  color: #531818;
 }
 body h3 {
   font-size: 1.5;
@@ -159,66 +175,85 @@ body h3 {
   border: 95%;
 }
 .wrapper nav {
-  display: flex;
   flex-direction: row-reverse;
+  justify-content: flex-start;
+  display: flex;
 }
 .wrapper nav a {
+  text-decoration: none;
   display: flex;
-  justify-content: space-around;
+  color: #531818;
+  font-weight: bold;
+  margin: 2%;
 }
 .top {
+  background-color: #f1f2f6;
   display: flex;
   flex-direction: column;
-  background-color: lightgray;
   padding: 3%;
   border: 80%;
 }
 .top img {
-  width: 35%;
   height: 50%;
+  width: 35%;
   margin: 2%;
+  border: 2px solid #531818;
+  border-radius: 5px;
+  padding: 2%;
 }
 .top button {
-  margin: 3%;
-  padding: 2% 5%;
+  margin-top: 2%;
+  color: #531818;
+  font-weight: bold;
+  border: 2px solid #531818;
+  border-radius: 5px;
+  padding: 2%;
 }
 .middle {
   display: flex;
-  justify-content: space-evenly;
 }
 .middle div {
   display: flex;
   padding: 2%;
   width: 45%;
-  background-color: pink;
 }
 .middle .leftInfo {
-  display: flex;
+  background-color: #f1f2f6;
   flex-direction: column;
-}
-.middle .rightInfo {
-  display: flex;
-  flex-direction: column;
-}
-.middle .rightInfo ul {
-  border: 2px solid black;
-  border-radius: 10px;
-}
-.bottom {
   display: flex;
   margin: 2%;
+  width: 35%;
+  border: 2px solid #531818;
+  border-radius: 5px;
+  padding: 2%;
+}
+.middle .rightInfo {
+  background-color: #f1f2f6;
+  flex-direction: column;
+  display: flex;
+  margin: 2%;
+  width: 65%;
+  border: 2px solid #531818;
+  border-radius: 5px;
+  padding: 2%;
+}
+.bottom {
+  background-color: #f1f2f6;
+  display: flex;
+  flex-direction: column;
+  margin: 2%;
+  border: 2px solid #531818;
+  border-radius: 5px;
+  padding: 2%;
 }
 .bottom ul {
   display: flex;
   flex-direction: column;
-  border: 2px solid black;
-  border-radius: 10px;
 }
 .bottom ul li {
   display: flex;
 }
 .bottom ul li h3 {
-  display: flex;
   flex-direction: row;
-  background-color: lightgray;
+  display: flex;
 }

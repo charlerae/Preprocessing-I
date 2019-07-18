@@ -62,17 +62,38 @@ table {
 /* ------------------- */
 
 // VARIABLES
-@colormain: lightgray;
-@colorpop: red;
+@colormain: #f1f2f6;
+@colorpop: rgb(83, 24, 24);
 
 // MIXINS
-.boxes {
-	border: 2px solid black;
-	border-radius: 10px;
+.columnflex {
+	display: flex;
+	flex-direction: column;
 }
+
+.fancytext {
+	color: @colorpop;
+	font-weight: bold;
+}
+
+.boxes {
+	border: 2px solid rgb(83, 24, 24);
+	border-radius: 5px;
+	padding: 2%;
+}
+
+.middleBox {
+	background-color: @colormain;
+	flex-direction: column;
+	display: flex;
+	margin: 2%;
+}
+
+// MY STYLING CODE STARTS HERE
 
 body {
 	display: flex;
+	background-color: #a4b0be;
 	
 	h1, h2, h3 {
 		font-style: italic
@@ -94,83 +115,85 @@ body {
 }
 
 .wrapper {
-	display: flex;
-	flex-direction: column;
+	.columnflex();
 	padding: 3%;
 	border: 95%;
 
 	nav {
-		display: flex;
 		flex-direction: row-reverse;
+		justify-content: flex-start;
+		display: flex;
 		
 		a {
+			text-decoration: none;
 			display: flex;
-			justify-content: space-around;
+			.fancytext();
+			margin: 2%;
 		}
 	}
 }
 
 .top {
-	display: flex;
-	flex-direction: column;
 	background-color: @colormain;
+	.columnflex();
 	padding: 3%;
 	border: 80%;
 
 	img {
-		width: 35%;
 		height: 50%;
+		width: 35%;
 		margin: 2%;
+		.boxes();
 	}
 
 	button {
-		margin: 3%;
-		padding: 2% 5%;
+		margin-top: 2%;
+		.fancytext();
+		.boxes();
 	}
 }
 
 .middle {
 	display: flex;
-	justify-content: space-evenly;
 
 	div {
 		display: flex;
 		padding: 2%;
 		width: 45%;
-		background-color: pink;
 	}
 
 	.leftInfo {
-		display: flex;
-		flex-direction: column;
+		.middleBox;
+		width: 35%;
+		.boxes();
 	}
 
 	.rightInfo {
-		display: flex;
-		flex-direction: column;
+		.middleBox();
+		width: 65%;
+		.boxes();
 
-		ul {
-			.boxes();
-		}
+		// ul {
+			
+		// }
 	}
 }
 
 .bottom {
-	display: flex;
+	background-color: @colormain;
+	.columnflex();
 	margin: 2%;
+	.boxes();
 
 	ul {
-		display: flex;
-		flex-direction: column;
-		.boxes();
+		.columnflex();
 
 		li {
 			display: flex;
 
 			h3 {
-				display: flex;
 				flex-direction: row;
-				background-color: @colormain;
+				display: flex;
 				}
 		}
 	
