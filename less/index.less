@@ -65,6 +65,7 @@ table {
 @colormain: #f1f2f6;
 @colorpop: rgb(83, 24, 24);
 
+@fontStack: 'Lobster' , cursive;
  
 
 // MIXINS
@@ -121,6 +122,7 @@ body {
 
 	h1 {
 		font-size: 2.5rem;
+		font-family: @fontStack;
 	}
 
 	h2 {
@@ -143,13 +145,23 @@ body {
 	nav {
 		flex-direction: row-reverse;
 		.justifyflex(flex-start);
+
+		@media (max-width: 500px) {
+			flex-direction: column-reverse;
+			align-items: center;
+		}
 		
 		a {
 			text-decoration: none;
 			display: flex;
 			.fancytext();
 			margin: 2%;
+
+			@media (max-width: 500px) {
+				border-bottom: 1px solid @colorpop;
+			}
 		}
+
 	}
 
 	footer {
@@ -193,13 +205,13 @@ body {
 
 	.leftInfo {
 		.middleBox;
-		width: 35%;
+		width: 30%;
 		.boxes();
-	}
-
+	} 
+	
 	.rightInfo {
 		.middleBox();
-		width: 65%;
+		width: 100%;
 		.boxes();
 
 		h3 {
@@ -209,6 +221,22 @@ body {
 		hr {
 			.hr();
 		 }
+
+		ul {
+			
+
+			.topEd {
+				width: 100%;
+				padding: 2%;
+				}
+
+			.bottomEd {
+				width: 100%;
+				padding: 2%;
+			}
+
+				
+		}
 	}
 }
 
@@ -245,12 +273,8 @@ body {
 		}
 
 		li {
-			display: flex;
-
-			h3 {
-				flex-direction: row;
-				display: flex;
-				}
+			.justifyflex(column);
+			padding: 1%;
 		}
 	
 	}
