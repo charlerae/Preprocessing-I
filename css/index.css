@@ -127,16 +127,13 @@ table {
   border-spacing: 0;
 }
 /* Set every element's box-sizing to border-box */
-* {
-  box-sizing: border-box;
-}
-html,
-body {
-  height: 100%;
-}
 /* ------------------- */
 /* MY CODE STARTS HERE */
 /* ------------------- */
+.boxes {
+  border: 2px solid black;
+  border-radius: 10px;
+}
 body {
   display: flex;
 }
@@ -169,19 +166,19 @@ body h3 {
   display: flex;
   justify-content: space-around;
 }
-.containerTop {
+.top {
   display: flex;
   flex-direction: column;
   background-color: lightgray;
   padding: 3%;
   border: 80%;
 }
-.containerTop img {
+.top img {
   width: 35%;
   height: 50%;
   margin: 2%;
 }
-.containerTop button {
+.top button {
   margin: 3%;
   padding: 2% 5%;
 }
@@ -203,10 +200,25 @@ body h3 {
   display: flex;
   flex-direction: column;
 }
+.middle .rightInfo ul {
+  border: 2px solid black;
+  border-radius: 10px;
+}
 .bottom {
   display: flex;
+  margin: 2%;
 }
 .bottom ul {
   display: flex;
-  lih3background-color: lightgray;
+  flex-direction: column;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+.bottom ul li {
+  display: flex;
+}
+.bottom ul li h3 {
+  display: flex;
+  flex-direction: row;
+  background-color: lightgray;
 }

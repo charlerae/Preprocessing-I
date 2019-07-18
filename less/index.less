@@ -49,22 +49,27 @@ table {
 }
 
 /* Set every element's box-sizing to border-box */
-* {
-    box-sizing: border-box;
-}
+// * {
+//     box-sizing: border-box;
+// }
 
-html, body {
-	height: 100%;
-}
+// html, body {
+// 	height: 100%;
+// }
 
 /* ------------------- */
 /* MY CODE STARTS HERE */ 
 /* ------------------- */
 
+// VARIABLES
 @colormain: lightgray;
 @colorpop: red;
 
-// @boxes: ;
+// MIXINS
+.boxes {
+	border: 2px solid black;
+	border-radius: 10px;
+}
 
 body {
 	display: flex;
@@ -105,12 +110,12 @@ body {
 	}
 }
 
-.containerTop {
+.top {
 	display: flex;
 	flex-direction: column;
 	background-color: @colormain;
 	padding: 3%;
-	// border: 80%;
+	border: 80%;
 
 	img {
 		width: 35%;
@@ -143,6 +148,10 @@ body {
 	.rightInfo {
 		display: flex;
 		flex-direction: column;
+
+		ul {
+			.boxes();
+		}
 	}
 }
 
@@ -153,9 +162,18 @@ body {
 	ul {
 		display: flex;
 		flex-direction: column;
-		background-color: lightgoldenrodyellow;
+		.boxes();
 
-		li h3 {
-			background-color: @colormain;
+		li {
+			display: flex;
+
+			h3 {
+				display: flex;
+				flex-direction: row;
+				background-color: @colormain;
+				}
+		}
+	
 	}
 }
+
