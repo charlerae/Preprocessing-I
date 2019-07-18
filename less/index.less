@@ -64,12 +64,18 @@ table {
 // VARIABLES
 @colormain: #f1f2f6;
 @colorpop: rgb(83, 24, 24);
+
  
 
 // MIXINS
 .columnflex {
 	display: flex;
 	flex-direction: column;
+}
+
+.justifyflex(@justify) {
+	display: flex;
+	justify-content: @justify;
 }
 
 .fancytext {
@@ -136,8 +142,7 @@ body {
 
 	nav {
 		flex-direction: row-reverse;
-		justify-content: flex-start;
-		display: flex;
+		.justifyflex(flex-start);
 		
 		a {
 			text-decoration: none;
@@ -148,8 +153,7 @@ body {
 	}
 
 	footer {
-		justify-content: space-between;
-		display: flex;
+		.justifyflex(space-between);
 
 		a {
 			text-decoration: none;
@@ -226,14 +230,12 @@ body {
 			display: flex;
 			
 			li {
-				display: flex;
-				justify-content: space-between;
+				.justifyflex(space-between);
 				width: 100%;
 			}
 
 			.worklist {
-				display: flex;
-				justify-content: space-between;
+				.justifyflex(space-between);
 				width: 100%;
 			}
 		}
